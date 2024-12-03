@@ -1,0 +1,109 @@
+
+/* Fontes e Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif; /* Fonte já configurada no HTML */
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333; 
+    color: white;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cart img {
+    height: 30px; /* Ajustar conforme o tamanho do ícone */
+}
+
+/* Corpo */
+.main {
+    padding: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsivo */
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    width: 200px; /* Largura fixa */
+    height: 300px; /* Altura fixa */
+    object-fit: cover;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Rodapé */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333; /* Pode alterar a cor para combinar com o tema */
+    color: white;
+}
+
+.footer a {
+    color: #0d6efd; /* Cor dos links no rodapé */
+    text-decoration: none;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none; /* Esconde o menu em telas pequenas */
+    }
+
+    .cart img {
+        height: 40px; /* Aumenta o ícone no celular */
+    }
+}
+
+@media (min-width: 769px) {
+    .cart img {
+        height: 50px; /* Aumenta o ícone no desktop */
+    }
+}
